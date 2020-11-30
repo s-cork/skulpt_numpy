@@ -1032,7 +1032,7 @@ var $builtinmodule = function (name) {
         if (dtype instanceof Sk.builtin.none && Sk.builtin.checkNone(obj)) {
             return obj;
         } else {
-            return Sk.misceval.callsim(dtype, obj);
+            return Sk.misceval.callsim(dtype, Sk.ffi.remapToPy(obj));
         }
     }
 
